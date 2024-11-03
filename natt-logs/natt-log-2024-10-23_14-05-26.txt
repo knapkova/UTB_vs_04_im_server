@@ -1,0 +1,174 @@
+[14:05:26][PluginLoader][WARNING] Plugins directory not found.
+[14:05:27][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[14:05:27][NATTCore][INFO] Working directory path: /Users/terezaknapkova/Documents/utb/5th_sem/VS_cviko/04_im-server-main
+[14:05:27][NATTCore][INFO] Start loading of the configuration file ...
+[14:05:28][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads)
+[14:05:28][NATTCore][INFO] Configuration loading done
+[14:05:28][NATTCore][INFO] Start building test structure according to the configuration ...
+[14:05:28][NATTCore][INFO] Test structure ...
+[14:05:28][NATTCore][INFO] Test structure building done
+[14:05:28][NATTCore][INFO] Start test executing ...
+[14:05:28][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[14:05:28][NATTCore][INFO] Starts execution on the root keyword  ...
+[14:05:28][MessageBuffer][INFO] Message buffer created for module with name: default
+[14:05:28][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 10
+[14:05:28][ProcessManager][INFO] New PID (36977) added to file
+[14:05:28][WaitKw][INFO] Waiting: 3000 ms
+[14:05:29][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'IM server listening on port 9999, maximum nr. of connections=10...'
+[14:05:31][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[14:05:31][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[14:05:31][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[14:05:31][TelnetClient][INFO] (client-2) Telnet client connected to host with the address: 'localhost' on port '9999'
+[14:05:31][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[14:05:31][TelnetClient][INFO] (client-3) Telnet client connected to host with the address: 'localhost' on port '9999'
+[14:05:31][WaitKw][INFO] Waiting: 2000 ms
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Please set your name using #setMyName <name>'
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Please set your name using #setMyName <name>'
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Please set your name using #setMyName <name>'
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: ''
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'You are connected from /127.0.0.1:50045'
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: ''
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'You are connected from /127.0.0.1:50046'
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: ''
+[14:05:31][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'You are connected from /127.0.0.1:50044'
+[14:05:33][TelnetClient][INFO] (client-1) Message send: Klient1
+[14:05:33][TelnetClient][INFO] (client-2) Message send: Klient2
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:33][TelnetClient][INFO] (client-3) Message send: Klient3
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:33][WaitKw][INFO] Waiting: 800 ms
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'OutputHandler, wakeup and die!'
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'OutputHandler, wakeup and die!'
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'OutputHandler, wakeup and die!'
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50045: Klient2'
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50046: Klient3'
+[14:05:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: Klient1'
+[14:05:34][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 1' starts executing now
+[14:05:34][TelnetClient][INFO] (client-1) Message send: Hello, world!
+[14:05:34][WaitKw][INFO] Waiting: 1000 ms
+[14:05:34][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: Hello, world!'
+[14:05:35][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'OutputHandler, wakeup and die!' must contains expected text '[Klient1] >> Hello, world!')
+[14:05:35][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'OutputHandler, wakeup and die!' must contains expected text '[Klient1] >> Hello, world!')
+[14:05:35][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 1' failed
+[14:05:35][MessageBuffer][INFO] Message buffer cleared
+[14:05:36][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 2' starts executing now
+[14:05:36][TelnetClient][INFO] (client-1) Message send: Testing 123
+[14:05:36][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: Testing 123'
+[14:05:36][TelnetClient][INFO] (client-2) Message send: 12345 - 67890
+[14:05:36][TelnetClient][INFO] (client-3) Message send: This is a test message
+[14:05:36][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50045: 12345 - 67890'
+[14:05:36][WaitKw][INFO] Waiting: 1000 ms
+[14:05:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50046: This is a test message'
+[14:05:36][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:37][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[14:05:37][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text '[Klient2] >> 12345 - 67890')
+[14:05:37][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[14:05:37][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient3] >> This is a test message')
+[14:05:37][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[14:05:37][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient1] >> Testing 123')
+[14:05:37][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 2' failed
+[14:05:37][MessageBuffer][INFO] Message buffer cleared
+[14:05:37][TestSuiteKw][INFO] Test case 'Test odeslání soukromé zprávy' starts executing now
+[14:05:37][TelnetClient][INFO] (client-2) Message send: #sendPrivate Klient3 This is a private message
+[14:05:37][WaitKw][INFO] Waiting: 1000 ms
+[14:05:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50045: #sendPrivate Klient3 This is a private message'
+[14:05:37][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:38][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[14:05:38][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[14:05:38][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient2] >> This is a private message')
+[14:05:38][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Test odeslání soukromé zprávy' failed
+[14:05:38][MessageBuffer][INFO] Message buffer cleared
+[14:05:39][MessageBuffer][INFO] Message buffer cleared
+[14:05:39][TestSuiteKw][INFO] Test case 'Test vstoupení do diskuzní místnosti' starts executing now
+[14:05:39][TelnetClient][INFO] (client-1) Message send: #join MyGroup1
+[14:05:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:39][TelnetClient][INFO] (client-2) Message send: #join MyGroup1
+[14:05:39][WaitKw][INFO] Waiting: 1000 ms
+[14:05:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: #join MyGroup1'
+[14:05:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50045: #join MyGroup1'
+[14:05:40][TelnetClient][INFO] (client-1) Message send: #groups
+[14:05:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:40][WaitKw][INFO] Waiting: 1000 ms
+[14:05:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: #groups'
+[14:05:41][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'Set your name with -> #setMyName <name>' must contains expected text 'MyGroup1')
+[14:05:41][TelnetClient][INFO] (client-1) Message send: #leave public
+[14:05:41][TelnetClient][INFO] (client-2) Message send: #leave public
+[14:05:41][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:41][WaitKw][INFO] Waiting: 1000 ms
+[14:05:41][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: #leave public'
+[14:05:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50045: #leave public'
+[14:05:42][TelnetClient][INFO] (client-1) Message send: #groups
+[14:05:42][WaitKw][INFO] Waiting: 1000 ms
+[14:05:42][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:42][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: #groups'
+[14:05:43][TestSuiteKw][ERROR] Test suite 'Testování diskuzních místností' - Test case 'Test vstoupení do diskuzní místnosti' failed
+[14:05:43][MessageBuffer][INFO] Message buffer cleared
+[14:05:44][TestSuiteKw][INFO] Test case 'Test komunikace v diskuzní místnosti' starts executing now
+[14:05:44][TelnetClient][INFO] (client-1) Message send: This is private message
+[14:05:44][WaitKw][INFO] Waiting: 1000 ms
+[14:05:44][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: This is private message'
+[14:05:44][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:45][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'Set your name with -> #setMyName <name>' must contains expected text 'This is private message')
+[14:05:45][TelnetClient][INFO] (client-3) Message send: #join MyGroup1
+[14:05:45][WaitKw][INFO] Waiting: 1000 ms
+[14:05:45][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50046: #join MyGroup1'
+[14:05:46][TelnetClient][INFO] (client-1) Message send: This is private message
+[14:05:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Set your name with -> #setMyName <name>'
+[14:05:46][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: This is private message'
+[14:05:46][WaitKw][INFO] Waiting: 1000 ms
+[14:05:47][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'Set your name with -> #setMyName <name>' must contains expected text 'This is private message')
+[14:05:47][TestSuiteKw][ERROR] Test suite 'Testování diskuzních místností' - Test case 'Test komunikace v diskuzní místnosti' failed
+[14:05:47][MessageBuffer][INFO] Message buffer cleared
+[14:05:48][MessageBuffer][INFO] Message buffer cleared
+[14:05:48][TestSuiteKw][INFO] Test case 'Test změny jména' starts executing now
+[14:05:48][TelnetClient][INFO] (client-1) Message send: #setMyName NoveJmeno1
+[14:05:48][WaitKw][INFO] Waiting: 1000 ms
+[14:05:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Name set to NoveJmeno1 :)'
+[14:05:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Continue with: #sendPrivate <jméno> <zpráva> || #join <název> || #leave <název> || #groups	'
+[14:05:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: #setMyName NoveJmeno1'
+[14:05:49][TelnetClient][INFO] (client-1) Message send: This is new message
+[14:05:49][WaitKw][INFO] Waiting: 1000 ms
+[14:05:49][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[14:05:49][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: [NoveJmeno1] >> This is new message'
+[14:05:50][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'Set your name with -> #setMyName <name>' must contains expected text '[NoveJmeno1] >> This is new message')
+[14:05:50][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny jména' failed
+[14:05:50][MessageBuffer][INFO] Message buffer cleared
+[14:05:50][TestSuiteKw][INFO] Test case 'Test změny na neunikátní jméno' starts executing now
+[14:05:50][TelnetClient][INFO] (client-1) Message send: #setMyName Klient2
+[14:05:50][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[NoveJmeno1] >> #setMyName Klient2'
+[14:05:50][WaitKw][INFO] Waiting: 1000 ms
+[14:05:50][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: [NoveJmeno1] >> #setMyName Klient2'
+[14:05:51][TelnetClient][INFO] (client-1) Message send: This is new message
+[14:05:51][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[14:05:51][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:50044: [NoveJmeno1] >> This is new message'
+[14:05:51][WaitKw][INFO] Waiting: 1000 ms
+[14:05:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'Set your name with -> #setMyName <name>' must contains expected text '[NoveJmeno1] >> This is new message')
+[14:05:52][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny na neunikátní jméno' failed
+[14:05:52][MessageBuffer][INFO] Message buffer cleared
+[14:05:53][MessageBuffer][INFO] Message buffer cleared
+[14:05:53][MessageBuffer][INFO] Message buffer cleared
+[14:05:53][ExternalProgramRunner][INFO] (default) Termiting external application
+[14:05:53][ProcessManager][INFO] PID (36977) removed from file
+[14:05:53][ProcessManager][INFO] PID (36977) removed from file
+[14:05:53][TelnetClient][WARNING] (client-1) Connection closed
+[14:05:53][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[14:05:53][TelnetClient][WARNING] (client-2) Connection closed
+[14:05:53][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[14:05:53][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[14:05:53][TelnetClient][WARNING] (client-3) Connection closed
+[14:05:53][NATTCore][INFO] Test executing finished
+[14:05:53][NATTCore][INFO] Start generating test report
+[14:05:53][TestReportGenerator][INFO] Report saved to file
+[14:05:53][NATTCore][WARNING] Failed test cases: "Zaklaní test komunikace 1", "Zaklaní test komunikace 2", "Test odeslání soukromé zprávy", "Test vstoupení do diskuzní místnosti", "Test komunikace v diskuzní místnosti", "Test změny jména", "Test změny na neunikátní jméno"
+[14:05:53][NATTCore][INFO] Final score: 0.000000
+[14:05:53][NATTCore][ERROR] Testing done. Leaving status: FAILED
